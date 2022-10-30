@@ -1,4 +1,4 @@
-FROM alpine:3.16.2
+FROM schemaspy/schemaspy:snapshot
 
 LABEL maintainer="Tonye Jack <jtonye@ymail.com>"
 
