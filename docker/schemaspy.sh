@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if [ -d "$SCHEMASPY_DRIVERS" ]; then
-  export DRIVER_PATH=$SCHEMASPY_DRIVERS
+  export DRIVER_PATH="$SCHEMASPY_DRIVERS"
 else
   export DRIVER_PATH=/drivers_inc/
 fi
