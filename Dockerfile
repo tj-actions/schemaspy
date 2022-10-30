@@ -44,7 +44,4 @@ COPY entrypoint.sh /entrypoint.sh
 
 ENV SCHEMASPY_DRIVERS=/drivers
 
-USER java
-WORKDIR /
-
 ENTRYPOINT ["/entrypoint.sh"]
