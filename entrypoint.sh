@@ -177,7 +177,7 @@ if [[ -n "$INPUT_TABLE_PAGE_LENGTH" ]]; then
 fi
 
 if [[ -n "$INPUT_USER" ]]; then
-  ARGS="$ARGS --user $INPUT_USER"
+  ARGS="$ARGS -u $INPUT_USER"
 fi
 
 if [[ "$INPUT_VIZJS" == "true" ]]; then
