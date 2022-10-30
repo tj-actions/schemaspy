@@ -81,7 +81,7 @@ if [[ -n "$INPUT_FK_PAGE_LENGTH" ]]; then
 fi
 
 if [[ -n "$INPUT_HOST" ]]; then
-  ARGS="$ARGS --host $INPUT_HOST"
+  ARGS="$ARGS -host $INPUT_HOST"
 fi
 
 if [[ -n "$INPUT_IMAGE_FORMAT" ]]; then
@@ -145,7 +145,7 @@ if [[ -n "$INPUT_OUTPUT_DIR" ]]; then
 fi
 
 if [[ -n "$INPUT_PORT" ]]; then
-  ARGS="$ARGS --port $INPUT_PORT"
+  ARGS="$ARGS -port $INPUT_PORT"
 fi
 
 if [[ -n "$INPUT_RENDERER" ]]; then
