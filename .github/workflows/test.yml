@@ -27,7 +27,7 @@ jobs:
       - name: shellcheck
         uses: reviewdog/action-shellcheck@v1
       - name: Postgres Backup Restore
-        uses: tj-actions/pg-restore@v4.5
+        uses: tj-actions/pg-restore@v4.7
         with:
           database_url: "postgres://test_user:test_user_password@localhost:5432/testdb"
           backup_file: "backups/backup.sql"
