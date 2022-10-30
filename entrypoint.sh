@@ -49,7 +49,7 @@ if [[ -n "$INPUT_DATABASE_NAME" ]]; then
 fi
 
 if [[ -n "$INPUT_DATABASE_TYPE" ]]; then
-  ARGS="$ARGS --database-type $INPUT_DATABASE_TYPE"
+  ARGS="$ARGS -t $INPUT_DATABASE_TYPE"
 fi
 
 if [[ "$INPUT_DB_OBJECT_LENGTH_CHANGE" == "true" ]]; then
