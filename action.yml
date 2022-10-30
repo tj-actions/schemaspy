@@ -141,7 +141,7 @@ inputs:
   output_dir:
     description: 'Directory to place the generated files in'
     required: false
-    default: '.'
+    default: 'output'
   password:
     description: 'Password to connect to database, if required by databaseType.'
     required: false
