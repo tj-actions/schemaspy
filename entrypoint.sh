@@ -52,8 +52,8 @@ if [[ -n "$INPUT_DATABASE_TYPE" ]]; then
   ARGS="$ARGS --database-type=$INPUT_DATABASE_TYPE"
 fi
 
-if [[ -n "$INPUT_DB_OBJECT_LENGTH_CHANGE" ]]; then
-  ARGS="$ARGS --dbObjectLengthChange=$INPUT_DB_OBJECT_LENGTH_CHANGE"
+if [[ "$INPUT_DB_OBJECT_LENGTH_CHANGE" == "true" ]]; then
+  ARGS="$ARGS --dbObjectLengthChange"
 fi
 
 if [[ -n "$INPUT_DB_OBJECT_PAGE_LENGTH" ]]; then
