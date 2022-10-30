@@ -50,7 +50,11 @@ jobs:
         uses: tj-actions/verify-changed-files@v12
         id: verify-changed-files
         with:
-          files: output/**
+          files: |
+            output/**
+            !output/index.html
+            !output/columns.html
+            !output/info-html.html
 
       - name: Commit Schema docs changes
         if: steps.verify-changed-files.outputs.files_changed == 'true'
