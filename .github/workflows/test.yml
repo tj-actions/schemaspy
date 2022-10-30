@@ -32,7 +32,7 @@ jobs:
       - name: Run schemaspy
         uses: ./
         with:
-          host: localhost
+          host: 127.0.0.1
           port: 5432
           database_name: testdb
           database_type: pgsql
