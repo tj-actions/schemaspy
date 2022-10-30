@@ -1,17 +1,200 @@
-name: Docker Action
-description:  Template Docker action
+name: SchemaSpy
+description: Generate a database schema diagram from a live database.
 author: tj-actions
 inputs:
-  token:
-    description: 'GITHUB_TOKEN or a Repo scoped PAT'
-    required: true
-    default: ${{ github.token }}
+  license:
+    description: 'Print license, it will first print GPL and then LGPL (LGPL is addition to GPL)'
+    required: false
+    default: 'false'
+  graphviz_dir:
+    description: 'Path to directory containing graphviz bin folder. /bin/dot will be appended'
+    required: false
+    default: ''
+  low_quality:
+    description: 'Try to generate low quality diagrams, depending on renderers/Graphviz installation might not be available'
+    required: false
+    default: 'false'
+  anomalies_length_change:
+    description: 'Whether users can change the page length for anomalies'
+    required: false
+    default: 'false'
+  anomalies_page_length:
+    description: 'The DataTables pageLength for anomalies'
+    required: false
+    default: '10'
+  catalog:
+    description: 'Filter using a specific catalog this is usually the root of the database and contains schemas.'
+    required: false
+    default: ''
+  check_length_change:
+    description: 'Whether users can change the page length for check constraints'
+    required: false
+    default: 'false'
+  check_page_length:
+    description: 'The DataTables pageLength for check constraints'
+    required: false
+    default: '10'
+  column_length_change:
+    description: 'Whether users can change the page length for routines'
+    required: false
+    default: 'false'
+  column_page_length:
+    description: 'The DataTables pageLength for routines'
+    required: false
+    default: '50'
+  database_name:
+    description: 'Name of the database to connect to'
+    required: false
+    default: ''
+  database_type:
+    description: 'Type of database to connect to'
+    required: false
+    default: 'ora'
+  db_object_length_change:
+    description: 'Whether users can change the page length for database objects'
+    required: false
+    default: 'false'
+  db_object_page_length:
+    description: 'The DataTables pageLength for database objects'
+    required: false
+    default: '50'
+  debug:
+    description: 'Enable debug logging'
+    required: false
+    default: 'false'
+  degree:
+    description: 'Limit the degree of separation, allowed values 1 or 2, defaults to 2'
+    required: false
+    default: '2'
+  driver_path:
+    description: 'Path to look for JDBC drivers overrides driverPath in [databaseType].properties, supports directory, will add directory and recurse to add all content. Supports multiple paths using os dependent pathSeparator.'
+    required: false
+    default: ''
+  fk_length_change:
+    description: 'Whether users can change the page length for foreign keys'
+    required: false
+    default: 'false'
+  fk_page_length:
+    description: 'The DataTables pageLength for foreign keys'
+    required: false
+    default: '10'
+  host:
+    description: 'Hostname/ip to connect to, if required by databaseType.'
+    required: false
+    default: ''
+  image_format:
+    description: 'The format of the image that gets generated. Supported formats are svg and png. Defaults to png.'
+    required: false
+    default: 'png'
+  index_length_change:
+    description: 'Whether users can change the page length for indexes'
+    required: false
+    default: 'false'
+  index_page_length:
+    description: 'The DataTables pageLength for indexes'
+    required: false
+    default: '10'
+  schema_meta:
+    description: 'Single schema analysis file path to SchemaMeta_xml, when running `_all` or `_schemas` path to directory containing SchemaMeta_xmls with pattern (DatabaseName|Schema).meta.xml'
+    required: false
+    default: 'false'
+  no_anomalies_paging:
+    description: 'Whether DataTables for anomalies should have pagination'
+    required: false
+    default: 'false'
+  no_check_paging:
+    description: 'Whether DataTables for check constraints should have pagination'
+    required: false
+    default: 'false'
+  no_column_paging:
+    description: 'Whether DataTables for routines should have pagination'
+    required: false
+    default: 'false'
+  no_db_object_paging:
+    description: 'Whether DataTables for database objects should have pagination'
+    required: false
+    default: 'false'
+  no_fk_paging:
+    description: 'Whether DataTables for foreign keys should have pagination'
+    required: false
+    default: 'false'
+  no_index_paging:
+    description: 'Whether DataTables for indexes should have pagination'
+    required: false
+    default: 'false'
+  no_routine_paging:
+    description: 'Whether DataTables for routines should have pagination'
+    required: false
+    default: 'false'
+  no_table_paging:
+    description: 'Whether DataTables for database tables should have pagination'
+    required: false
+    default: 'false'
+  no_html:
+    description: 'Skip html generation'
+    required: false
+    default: 'false'
+  no_implied:
+    description: 'Do not look for implied relationships'
+    required: false
+    default: 'false'
+  output_dir:
+    description: 'Directory to place the generated files in'
+    required: false
+    default: 'output'
+  password:
+    description: 'Password to connect to database, if required by databaseType.'
+    required: false
+    default: ''
+  port:
+    description: 'Port that dbms listens to, if required by databaseType.'
+    required: false
+    default: ''
+  renderer:
+    description: 'Specify which renderer to use should be prefixed with `:`. Example `:cairo`'
+    required: false
+    default: ''
+  routine_length_change:
+    description: 'Whether users can change the page length for routines'
+    required: false
+    default: 'false'
+  routine_page_length:
+    description: 'The DataTables pageLength for routines'
+    required: false
+    default: '50'
+  schema:
+    description: 'Name of the schema to analyze (defaults to the specified user)'
+    required: false
+    default: ''
+  sso:
+    description: 'Use single sign on, if required by databaseType.'
+    required: false
+    default: 'false'
+  table_length_change:
+    description: 'Whether users can change the page length for database tables'
+    required: false
+    default: 'false'
+  table_page_length:
+    description: 'The DataTables pageLength for database tables'
+    required: false
+    default: '50'
+  user:
+    description: 'Username to connect with, if required by databaseType.'
+    required: false
+    default: ''
+  vizjs:
+    description: 'Use vizjs instead of graphviz'
+    required: false
+    default: 'false'
+  all:
+    description: 'Analyze all schemas in the database'
+    required: false
+    default: 'false'
 
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.token }}
+
 branding:
   icon: check-square
   color: white

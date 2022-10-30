@@ -1,26 +1,71 @@
-[![CI](https://github.com/tj-actions/docker-action/workflows/CI/badge.svg)](https://github.com/tj-actions/docker-action/actions?query=workflow%3ACI)
-[![Update release version.](https://github.com/tj-actions/docker-action/workflows/Update%20release%20version./badge.svg)](https://github.com/tj-actions/docker-action/actions?query=workflow%3A%22Update+release+version.%22)
-[![Public workflows that use this action.](https://img.shields.io/endpoint?url=https%3A%2F%2Fused-by.vercel.app%2Fapi%2Fgithub-actions%2Fused-by%3Faction%3Dtj-actions%2Fdocker-action%26badge%3Dtrue)](https://github.com/search?o=desc\&q=tj-actions+docker-action+path%3A.github%2Fworkflows+language%3AYAML\&s=\&type=Code)
+[![CI](https://github.com/tj-actions/schemaspy/workflows/CI/badge.svg)](https://github.com/tj-actions/schemaspy/actions?query=workflow%3ACI)
+[![Update release version.](https://github.com/tj-actions/schemaspy/workflows/Update%20release%20version./badge.svg)](https://github.com/tj-actions/schemaspy/actions?query=workflow%3A%22Update+release+version.%22)
+[![Public workflows that use this action.](https://img.shields.io/endpoint?url=https%3A%2F%2Fused-by.vercel.app%2Fapi%2Fgithub-actions%2Fused-by%3Faction%3Dtj-actions%2Fschemaspy%26badge%3Dtrue)](https://github.com/search?o=desc\&q=tj-actions+schemaspy+path%3A.github%2Fworkflows+language%3AYAML\&s=\&type=Code)
 
-## docker-action
+## schemaspy
 
-Template Docker action
+Run [schemaspy](https://schemaspy.org/) to generate a database schema documentation website.
 
 ```yaml
 ...
     steps:
       - uses: actions/checkout@v2
-      - name: Docker Action
-        uses: tj-actions/docker-action@v1
+      - name: Run SchemaSpy
+        uses: tj-actions/schemaspy@v1
 ```
 
 ## Inputs
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-| INPUT |  TYPE  | REQUIRED |         DEFAULT         |             DESCRIPTION              |
-|-------|--------|----------|-------------------------|--------------------------------------|
-| token | string |   true   | `"${{ github.token }}"` | GITHUB\_TOKEN or a Repo scoped<br>PAT |
+|          INPUT           |  TYPE  | REQUIRED |  DEFAULT   |                                                                                                           DESCRIPTION                                                                                                            |
+|--------------------------|--------|----------|------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|           all            | string |  false   | `"false"`  |                                                                                              Analyze all schemas in the<br>database                                                                                              |
+| anomalies_length_change  | string |  false   | `"false"`  |                                                                                    Whether users can change the<br>page length for anomalies                                                                                     |
+|  anomalies_page_length   | string |  false   |   `"10"`   |                                                                                           The DataTables pageLength for anomalies<br>                                                                                            |
+|         catalog          | string |  false   |            |                                                             Filter using a specific catalog<br>this is usually the root<br>of the database and contains<br>schemas.                                                              |
+|   check_length_change    | string |  false   | `"false"`  |                                                                              Whether users can change the<br>page length for check constraints<br>                                                                               |
+|    check_page_length     | string |  false   |   `"10"`   |                                                                                        The DataTables pageLength for check<br>constraints                                                                                        |
+|   column_length_change   | string |  false   | `"false"`  |                                                                                     Whether users can change the<br>page length for routines                                                                                     |
+|    column_page_length    | string |  false   |   `"50"`   |                                                                                            The DataTables pageLength for routines<br>                                                                                            |
+|      database_name       | string |  false   |            |                                                                                              Name of the database to<br>connect to                                                                                               |
+|      database_type       | string |  false   |  `"ora"`   |                                                                                                Type of database to connect<br>to                                                                                                 |
+| db_objects_length_change | string |  false   | `"false"`  |                                                                               Whether users can change the<br>page length for database objects<br>                                                                               |
+|  db_objects_page_length  | string |  false   |   `"50"`   |                                                                                        The DataTables pageLength for database<br>objects                                                                                         |
+|          debug           | string |  false   | `"false"`  |                                                                                                       Enable debug logging                                                                                                       |
+|          degree          | string |  false   |   `"2"`    |                                                                            Limit the degree of separation,<br>allowed values 1 or 2,<br>defaults to 2                                                                            |
+|       driver_path        | string |  false   |            | Path to look for JDBC<br>drivers overrides driverPath in [databaseType].properties,<br>supports directory, will add directory<br>and recurse to add all<br>content. Supports multiple paths using<br>os dependent pathSeparator. |
+|     fk_length_change     | string |  false   | `"false"`  |                                                                                 Whether users can change the<br>page length for foreign keys<br>                                                                                 |
+|      fk_page_length      | string |  false   |   `"10"`   |                                                                                          The DataTables pageLength for foreign<br>keys                                                                                           |
+|       graphviz_dir       | string |  false   |            |                                                                        Path to directory containing graphviz<br>bin folder. /bin/dot will be<br>appended                                                                         |
+|           host           | string |  false   |            |                                                                                    Hostname/ip to connect to, if<br>required by databaseType.                                                                                    |
+|       image_format       | string |  false   |  `"png"`   |                                                            The format of the image<br>that gets generated. Supported formats<br>are svg and png. Defaults<br>to png.                                                             |
+|   index_length_change    | string |  false   | `"false"`  |                                                                                     Whether users can change the<br>page length for indexes                                                                                      |
+|    index_page_length     | string |  false   |   `"10"`   |                                                                                            The DataTables pageLength for indexes<br>                                                                                             |
+|         license          | string |  false   | `"false"`  |                                                                     Print license, it will first<br>print GPL and then LGPL<br>(LGPL is addition to GPL)<br>                                                                     |
+|       low_quality        | string |  false   | `"false"`  |                                                         Try to generate low quality<br>diagrams, depending on renderers/Graphviz installation<br>might not be available                                                          |
+|   no_anomalies_paging    | string |  false   | `"false"`  |                                                                                    Whether DataTables for anomalies should<br>have pagination                                                                                    |
+|     no_check_paging      | string |  false   | `"false"`  |                                                                                Whether DataTables for check constraints<br>should have pagination                                                                                |
+|     no_column_paging     | string |  false   | `"false"`  |                                                                                    Whether DataTables for routines should<br>have pagination                                                                                     |
+|   no_db_objects_paging   | string |  false   | `"false"`  |                                                                                Whether DataTables for database objects<br>should have pagination                                                                                 |
+|       no_fk_paging       | string |  false   | `"false"`  |                                                                                  Whether DataTables for foreign keys<br>should have pagination                                                                                   |
+|         no_html          | string |  false   | `"false"`  |                                                                                                       Skip html generation                                                                                                       |
+|        no_implied        | string |  false   | `"false"`  |                                                                                             Do not look for implied<br>relationships                                                                                             |
+|     no_index_paging      | string |  false   | `"false"`  |                                                                                     Whether DataTables for indexes should<br>have pagination                                                                                     |
+|    no_routine_paging     | string |  false   | `"false"`  |                                                                                    Whether DataTables for routines should<br>have pagination                                                                                     |
+|     no_table_paging      | string |  false   | `"false"`  |                                                                                 Whether DataTables for database tables<br>should have pagination                                                                                 |
+|        output_dir        | string |  false   | `"output"` |                                                                                           Directory to place the generated<br>files in                                                                                           |
+|           port           | string |  false   |            |                                                                                    Port that dbms listens to,<br>if required by databaseType.                                                                                    |
+|         renderer         | string |  false   |  `"dot"`   |                                                                   Specify which renderer to use<br>should be prefixed with `:`.<br>Example `_renderer :cairo`                                                                    |
+|  routine_length_change   | string |  false   | `"false"`  |                                                                                     Whether users can change the<br>page length for routines                                                                                     |
+|   routine_page_length    | string |  false   |   `"50"`   |                                                                                            The DataTables pageLength for routines<br>                                                                                            |
+|          schema          | string |  false   |            |                                                                               Name of the schema to<br>analyze (defaults to the specified<br>user)                                                                               |
+|       schema-meta        | string |  false   | `"false"`  |                   Single schema analysis file path<br>to SchemaMeta_xml, when running `_all`<br>or `_schemas` path to directory<br>containing SchemaMeta_xmls with pattern (DatabaseName|Schema).meta.xml<br>                    |
+|           sso            | string |  false   | `"false"`  |                                                                                       Use single sign on, if<br>required by databaseType.                                                                                        |
+|   table_length_change    | string |  false   | `"false"`  |                                                                               Whether users can change the<br>page length for database tables<br>                                                                                |
+|    table_page_length     | string |  false   |   `"50"`   |                                                                                         The DataTables pageLength for database<br>tables                                                                                         |
+|           user           | string |  false   |            |                                                                                    Username to connect with, if<br>required by databaseType.                                                                                     |
+|          vizjs           | string |  false   | `"false"`  |                                                                                                Use vizjs instead of graphviz<br>                                                                                                 |
 
 <!-- AUTO-DOC-INPUT:END -->
 
@@ -44,7 +89,7 @@ This package was created with [Cookiecutter](https://github.com/cookiecutter/coo
 
 ## Report Bugs
 
-Report bugs at https://github.com/tj-actions/docker-action/issues.
+Report bugs at https://github.com/tj-actions/schemaspy/issues.
 
 If you are reporting a bug, please include:
 
