@@ -61,7 +61,7 @@ if [[ -n "$INPUT_DB_OBJECT_PAGE_LENGTH" ]]; then
 fi
 
 if [[ "$INPUT_DEBUG" == "true" ]]; then
-  ARGS="$ARGS --debug"
+  ARGS="$ARGS -debug"
 fi
 
 if [[ -n "$INPUT_DEGREE" ]]; then
