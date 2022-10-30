@@ -1,4 +1,4 @@
-name: SchemaSpy
+name: Run SchemaSpy
 description: Generate a database schema diagram from a live database.
 author: tj-actions
 inputs:
