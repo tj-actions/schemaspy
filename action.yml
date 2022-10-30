@@ -94,7 +94,7 @@ inputs:
     description: 'The DataTables pageLength for indexes'
     required: false
     default: '10'
-  schema-meta:
+  schema_meta:
     description: 'Single schema analysis file path to SchemaMeta_xml, when running `_all` or `_schemas` path to directory containing SchemaMeta_xmls with pattern (DatabaseName|Schema).meta.xml'
     required: false
     default: 'false'
