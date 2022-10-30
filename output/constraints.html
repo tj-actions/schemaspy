@@ -73,146 +73,58 @@
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                    <h1>Tables</h1><br />
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="callout callout-info">
-                                <h4>SchemaSpy Analysis of testdb</h4>
-                                <p>Generated on Sun Oct 30 09:45 GMT 2022</p>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="testdb.public.xml" title="XML Representation">XML Representation</a><br />
-                    <a href="insertionOrder.txt" title="Useful for loading data into a database">Insertion Order</a>
-                    <a href="deletionOrder.txt" title="Useful for purging data from a database">Deletion Order</a>
+                    <h1>Constraints</h1>
                 </section>
                 <!-- Main content -->
                 <section class="content">
-                    <div class="row">
-                        <div class="col-md-2 col-sm-4 col-xs-12">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-aqua"><i class="fa fa-table"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">TABLES</span>
-                                    <span class="info-box-number">1</span>
-                                </div>
-                                <!-- /.info-box-content -->
-                            </div>
-                            <!-- /.info-box -->
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-md-2 col-sm-4 col-xs-12">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-teal"><i class="fa fa-table"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">VIEWS</span>
-                                    <span class="info-box-number">0</span>
-                                </div>
-                                <!-- /.info-box-content -->
-                            </div>
-                            <!-- /.info-box -->
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-md-2 col-sm-4 col-xs-12">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-green"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">COLUMNS</span>
-                                    <span class="info-box-number">6</span>
-                                </div>
-                                <!-- /.info-box-content -->
-                            </div>
-                            <!-- /.info-box -->
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-md-2 col-sm-4 col-xs-12">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-yellow"><i class="ion ion-key"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Constraints</span>
-                                    <span class="info-box-number">0</span>
-                                </div>
-                                <!-- /.info-box-content -->
-                            </div>
-                            <!-- /.info-box -->
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-md-2 col-sm-4 col-xs-12">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-red-active"><i class="fa fa-question" aria-hidden="true"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Anomalies</span>
-                                    <span class="info-box-number">0</span>
-                                </div>
-                                <!-- /.info-box-content -->
-                            </div>
-                            <!-- /.info-box -->
-                        </div>
-                        <!-- /.col -->
-                        <div class="col-md-2 col-sm-4 col-xs-12">
-                            <div class="info-box">
-                                <span class="info-box-icon bg-navy"><i class="fa fa-file-code-o" aria-hidden="true"></i></span>
-                                <div class="info-box-content">
-                                    <span class="info-box-text">Routines</span>
-                                    <span class="info-box-number">0</span>
-                                </div>
-                                <!-- /.info-box-content -->
-                            </div>
-                            <!-- /.info-box -->
-                        </div>
-                        <!-- /.col -->
-                    </div>
                     <div class="box box-primary">
                         <div class="box-header with-border">
-                            <h3 class="box-title">Database Properties</h3>
-                            <span class="label label-primary pull-right"><i class="fa fa-cog fa-2x"></i></span>
-                        </div><!-- /.box-header -->
+                            <i class="ion ion-key"></i>
+                            <h3 class="box-title">0 Foreign Key Constraints</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
                         <div class="box-body">
-                            <p>Database Type: PostgreSQL - 15.0 (Debian 15.0-1.pgdg110+1)</p>
-                        </div><!-- /.box-body -->
-                    </div>
-                    <div class="box box-primary">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">Schema public</h3>
-                            <span class="label label-primary pull-right"><i class="fa fa-cog fa-2x"></i></span>
-                        </div><!-- /.box-header -->
-                        <div class="box-body">
-                            <p> <p>standard public schema</p> </p>
-                        </div><!-- /.box-body -->
-                    </div>
-                    <div class="box box-primary">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">Tables</h3>
-                            <span class="label label-primary pull-right"><i class="fa fa-database fa-2x"></i></span>
-                        </div><!-- /.box-header -->
-                        <div class="box-body">
-                            <table id="database_objects" class="table table-bordered table-striped dataTable" role="grid">
-                                <thead>
+                            <table id="fk_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead align='left'>
                                     <tr>
-                                        <th valign="bottom">Table / View</th>
-                                        <th align="right" valign="bottom">Children</th>
-                                        <th align="right" valign="bottom">Parents</th>
-                                        <th align="right" valign="bottom">Columns</th>
-                                        <th align="right" valign="bottom">Rows</th>
-                                        <th align="right" valign="bottom">Type</th>
-                                        <th class="toggle">Comments</th>
+                                        <th>Constraint Name</th>
+                                        <th>Child Column</th>
+                                        <th>Parent Column</th>
+                                        <th>Delete Rule</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="tbl even" valign="top">
-                                        <td class="detail"><a href="tables/accounts.html">accounts</a></td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">6</td>
-                                        <td class="detail" align="right">0</td>
-                                        <td class="detail" align="right">Table</td>
-                                        <td class="comment detail" style="display: table-cell;"></td>
-                                    </tr>
+                                </tbody>
                             </table>
                         </div>
-                    </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 class="box-title">Check Constraints</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table id="check_table" class="table table-bordered table-striped dataTable" role="grid">
+                                <thead align='left'>
+                                    <tr>
+                                        <th>Table</th>
+                                        <th>Constraint Name</th>
+                                        <th>Constraint</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </section>
-                <!-- /.content -->
                 <script>
                     var config = {
                         pagination: true
@@ -264,7 +176,7 @@
         <script src="bower/codemirror/sql.js"></script>
         <!-- AdminLTE App -->
         <script src="bower/admin-lte/dist/js/app.min.js"></script>
-        <script src="main.js"></script>
+        <script src="constraint.js"></script>
         <script src="schemaSpy.js"></script>
     </body>
 </html>
