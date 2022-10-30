@@ -25,7 +25,7 @@ if [[ -n "$INPUT_ANOMALIES_PAGE_LENGTH" ]]; then
 fi
 
 if [[ -n "$INPUT_CATALOG" ]]; then
-  ARGS="$ARGS --catalog $INPUT_CATALOG"
+  ARGS="$ARGS -cat $INPUT_CATALOG"
 fi
 
 if [[ "$INPUT_CHECK_LENGTH_CHANGE" == "true" ]]; then
