@@ -45,7 +45,7 @@ if [[ -n "$INPUT_COLUMN_PAGE_LENGTH" ]]; then
 fi
 
 if [[ -n "$INPUT_DATABASE_NAME" ]]; then
-  ARGS="$ARGS --database-name $INPUT_DATABASE_NAME"
+  ARGS="$ARGS -db $INPUT_DATABASE_NAME"
 fi
 
 if [[ -n "$INPUT_DATABASE_TYPE" ]]; then
