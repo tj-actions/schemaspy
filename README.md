@@ -14,6 +14,14 @@ Example site available here: https://tj-actions.github.io/schemaspy/
       - uses: actions/checkout@v2
       - name: Run SchemaSpy
         uses: tj-actions/schemaspy@v2
+        with:
+          host: postgres
+          port: 5432
+          database_name: testdb
+          database_type: pgsql
+          user: test_user
+          password: test_user_password
+          all: true
 ```
 
 ## Inputs
