@@ -1,12 +1,17 @@
 # Changelog
 
-## [Unreleased](https://github.com/tj-actions/schemaspy/tree/HEAD)
+## [v1.1](https://github.com/tj-actions/schemaspy/tree/v1.1) (2022-10-30)
 
-[Full Changelog](https://github.com/tj-actions/schemaspy/compare/v1...HEAD)
+[Full Changelog](https://github.com/tj-actions/schemaspy/compare/v1...v1.1)
 
 **Closed issues:**
 
 - Dependency Dashboard [\#2](https://github.com/tj-actions/schemaspy/issues/2)
+
+**Merged pull requests:**
+
+- chore: update test [\#9](https://github.com/tj-actions/schemaspy/pull/9) ([jackton1](https://github.com/jackton1))
+- Upgraded to v1 [\#8](https://github.com/tj-actions/schemaspy/pull/8) ([jackton1](https://github.com/jackton1))
 
 ## [v1](https://github.com/tj-actions/schemaspy/tree/v1) (2022-10-30)
 

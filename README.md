@@ -11,7 +11,7 @@ Run [schemaspy](https://schemaspy.org/) to generate a database schema documentat
     steps:
       - uses: actions/checkout@v2
       - name: Run SchemaSpy
-        uses: tj-actions/schemaspy@v1
+        uses: tj-actions/schemaspy@v1.1
 ```
 
 ## Inputs
