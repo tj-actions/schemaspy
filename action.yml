@@ -50,11 +50,11 @@ inputs:
     description: 'Type of database to connect to'
     required: false
     default: 'ora'
-  db_objects_length_change:
+  db_object_length_change:
     description: 'Whether users can change the page length for database objects'
     required: false
     default: 'false'
-  db_objects_page_length:
+  db_object_page_length:
     description: 'The DataTables pageLength for database objects'
     required: false
     default: '50'
@@ -110,7 +110,7 @@ inputs:
     description: 'Whether DataTables for routines should have pagination'
     required: false
     default: 'false'
-  no_db_objects_paging:
+  no_db_object_paging:
     description: 'Whether DataTables for database objects should have pagination'
     required: false
     default: 'false'
