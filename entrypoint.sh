@@ -184,6 +184,10 @@ if [[ "$INPUT_VIZJS" == "true" ]]; then
   ARGS="$ARGS --vizjs"
 fi
 
+if [[ -n "$INPUT_PASSWORD" ]]; then
+  ARGS="$ARGS -p $INPUT_PASSWORD"
+fi
+
 echo "::debug::Running: schemaspy $ARGS"
 
 # shellcheck disable=SC2086

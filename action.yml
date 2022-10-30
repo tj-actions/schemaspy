@@ -141,7 +141,11 @@ inputs:
   output_dir:
     description: 'Directory to place the generated files in'
     required: false
-    default: 'output'
+    default: '${{ github.workspace }}/output'
+  password:
+    description: 'Password to connect to database, if required by databaseType.'
+    required: false
+    default: ''
   port:
     description: 'Port that dbms listens to, if required by databaseType.'
     required: false
