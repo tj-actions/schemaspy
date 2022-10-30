@@ -112,7 +112,7 @@ if [[ "$INPUT_NO_COLUMN_PAGING" == "true" ]]; then
   ARGS="$ARGS --noColumnPaging"
 fi
 
-if [[ "$INPUT_NO_DB_OBJECTS_PAGING" == "true" ]]; then
+if [[ "$INPUT_NO_DB_OBJECT_PAGING" == "true" ]]; then
   ARGS="$ARGS --noDbObjectPaging"
 fi
 
