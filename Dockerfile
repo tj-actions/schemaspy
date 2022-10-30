@@ -47,4 +47,4 @@ ENV SCHEMASPY_DRIVERS=/drivers
 USER java
 WORKDIR /
 
-ENTRYPOINT ["/usr/local/bin/schemaspy"]
+ENTRYPOINT ["/entrypoint.sh"]
