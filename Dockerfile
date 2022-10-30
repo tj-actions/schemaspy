@@ -24,6 +24,7 @@ ADD docker/open-sans.tar.gz /usr/share/fonts/
 
 RUN adduser java -h / -D && \
     set -x && \
+    apk update && apk upgrade && \
     apk add --no-cache curl unzip bash graphviz fontconfig && \
     fc-cache -fv && \
     mkdir /drivers_inc && \
