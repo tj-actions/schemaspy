@@ -20,7 +20,7 @@ Template Docker action
 
 | INPUT |  TYPE  | REQUIRED |         DEFAULT         |             DESCRIPTION              |
 |-------|--------|----------|-------------------------|--------------------------------------|
-| token | string | true     | `"${{ github.token }}"` | GITHUB\_TOKEN or a Repo scoped<br>PAT |
+| token | string |   true   | `"${{ github.token }}"` | GITHUB\_TOKEN or a Repo scoped<br>PAT |
 
 <!-- AUTO-DOC-INPUT:END -->
 
