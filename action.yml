@@ -147,9 +147,9 @@ inputs:
     required: false
     default: ''
   renderer:
-    description: 'Specify which renderer to use should be prefixed with `:`. Example `_renderer :cairo`'
+    description: 'Specify which renderer to use should be prefixed with `:`. Example `:cairo`'
     required: false
-    default: 'dot'
+    default: ''
   routine_length_change:
     description: 'Whether users can change the page length for routines'
     required: false

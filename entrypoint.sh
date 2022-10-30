@@ -12,8 +12,8 @@ if [[ -n "$INPUT_GRAPHVIZ_DIR" ]]; then
   ARGS="$ARGS --graphviz-dir=$INPUT_GRAPHVIZ_DIR"
 fi
 
-if [[ -n "$INPUT_LOW_QUALITY" ]]; then
-  ARGS="$ARGS --low-quality=$INPUT_LOW_QUALITY"
+if [[ "$INPUT_LOW_QUALITY" == "true" ]]; then
+  ARGS="$ARGS --low-quality"
 fi
 
 if [[ "$INPUT_ANOMALIES_LENGTH_CHANGE" == "true" ]]; then
