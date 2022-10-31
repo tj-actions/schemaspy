@@ -51,11 +51,11 @@ jobs:
         id: verify-changed-files
         with:
           files: |
-            docs/**
             !docs/index.html
             !docs/columns.html
             !docs/info-html.html
             !docs/info-html.txt
+            docs/**
 
       - name: Commit Schema docs changes
         if: steps.verify-changed-files.outputs.files_changed == 'true'
