@@ -3,6 +3,8 @@ FROM --platform=linux/x86_64 amazoncorretto:17.0.5-alpine3.14
 LABEL maintainer="Tonye Jack <jtonye@ymail.com>"
 
 ENV LC_ALL=C
+ENV APP_HOME=/app
+ENV APP_USER=java
 
 ARG GIT_BRANCH=local
 ARG GIT_REVISION=local
@@ -33,15 +35,19 @@ RUN adduser java -h / -D && \
     curl -JLO https://search.maven.org/remotecontent?filepath=org/mariadb/jdbc/mariadb-java-client/$MARIADB_VERSION/mariadb-java-client-$MARIADB_VERSION.jar && \
     curl -JLO https://search.maven.org/remotecontent?filepath=org/postgresql/postgresql/$POSTGRESQL_VERSION/postgresql-$POSTGRESQL_VERSION.jar && \
     curl -JLO https://search.maven.org/remotecontent?filepath=net/sourceforge/jtds/jtds/$JTDS_VERSION/jtds-$JTDS_VERSION.jar && \
-    chown -R java /drivers_inc && \
+    chown -R $APP_USER /drivers_inc && \
     apk del curl
 
 ADD target/schema*.jar /usr/local/lib/schemaspy/
-COPY docker/schemaspy.sh /usr/local/bin/schemaspy
-COPY entrypoint.sh /entrypoint.sh
+ADD docker/schemaspy.sh /usr/local/bin/schemaspy
 
 ENV SCHEMASPY_DRIVERS=/drivers
 
-USER java
+USER $APP_USER
+
+WORKDIR $APP_HOME
+RUN chown -R $APP_USER $APP_HOME
+
+COPY entrypoint.sh $APP_HOME/entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
