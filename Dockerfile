@@ -43,11 +43,11 @@ ADD docker/schemaspy.sh /usr/local/bin/schemaspy
 
 ENV SCHEMASPY_DRIVERS=/drivers
 
-USER $APP_USER
-
 WORKDIR $APP_HOME
 RUN chown -R $APP_USER $APP_HOME
 
 COPY entrypoint.sh $APP_HOME/entrypoint.sh
+
+USER $APP_USER
 
 ENTRYPOINT ["/entrypoint.sh"]
