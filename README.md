@@ -85,6 +85,7 @@ Example documentation available here: https://tj-actions.github.io/schemaspy/
 ### Pulling image from ghcr.io
 
 Run
+
 ```shell
 docker pull ghcr.io/tj-actions/schemaspy:2.1
 ```
