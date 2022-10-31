@@ -1,12 +1,20 @@
 # Changelog
 
-## [v2.2](https://github.com/tj-actions/schemaspy/tree/v2.2) (2022-10-31)
+## [v2.3](https://github.com/tj-actions/schemaspy/tree/v2.3) (2022-10-31)
 
-[Full Changelog](https://github.com/tj-actions/schemaspy/compare/v2...v2.2)
+[Full Changelog](https://github.com/tj-actions/schemaspy/compare/v2...v2.3)
 
 ## [v2](https://github.com/tj-actions/schemaspy/tree/v2) (2022-10-31)
 
-[Full Changelog](https://github.com/tj-actions/schemaspy/compare/v2.1...v2)
+[Full Changelog](https://github.com/tj-actions/schemaspy/compare/v2.2...v2)
+
+**Merged pull requests:**
+
+- Upgraded to v2.2 [\#18](https://github.com/tj-actions/schemaspy/pull/18) ([jackton1](https://github.com/jackton1))
+
+## [v2.2](https://github.com/tj-actions/schemaspy/tree/v2.2) (2022-10-31)
+
+[Full Changelog](https://github.com/tj-actions/schemaspy/compare/v2.1...v2.2)
 
 **Merged pull requests:**
 
