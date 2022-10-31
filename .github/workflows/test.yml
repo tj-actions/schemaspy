@@ -52,10 +52,14 @@ jobs:
         with:
           files: |
             !docs/index.html
-            !docs/columns.html
-            !docs/info-html.html
+            !docs/information_schema/index.html
+            !docs/information_schema/info-html.txt
+            !docs/pg_catalog/index.html
+            !docs/pg_catalog/info-html.txt
+            !docs/public/columns.html
+            !docs/public/index.html
             !docs/info-html.txt
-            docs/**
+            !docs/public/info-html.txt
 
       - name: Commit Schema docs changes
         if: steps.verify-changed-files.outputs.files_changed == 'true'
