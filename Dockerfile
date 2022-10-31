@@ -22,8 +22,7 @@ LABEL GIT_REVISION=$GIT_REVISION
 
 ADD docker/open-sans.tar.gz /usr/share/fonts/
 
-RUN adduser java -h / -D && \
-    set -x && \
+RUN set -x && \
     apk update && apk upgrade && \
     apk add --no-cache curl unzip bash graphviz fontconfig && \
     fc-cache -fv && \
@@ -33,9 +32,6 @@ RUN adduser java -h / -D && \
     curl -JLO https://search.maven.org/remotecontent?filepath=org/mariadb/jdbc/mariadb-java-client/$MARIADB_VERSION/mariadb-java-client-$MARIADB_VERSION.jar && \
     curl -JLO https://search.maven.org/remotecontent?filepath=org/postgresql/postgresql/$POSTGRESQL_VERSION/postgresql-$POSTGRESQL_VERSION.jar && \
     curl -JLO https://search.maven.org/remotecontent?filepath=net/sourceforge/jtds/jtds/$JTDS_VERSION/jtds-$JTDS_VERSION.jar && \
-    mkdir /output && \
-    chown -R java /drivers_inc && \
-    chown -R java /output && \
     apk del curl
 
 ADD target/schema*.jar /usr/local/lib/schemaspy/
