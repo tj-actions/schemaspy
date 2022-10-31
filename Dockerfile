@@ -50,4 +50,4 @@ COPY entrypoint.sh $APP_HOME/entrypoint.sh
 
 USER $APP_USER
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["entrypoint.sh"]
