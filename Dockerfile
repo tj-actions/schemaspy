@@ -33,9 +33,7 @@ RUN adduser java -h / -D && \
     curl -JLO https://search.maven.org/remotecontent?filepath=org/mariadb/jdbc/mariadb-java-client/$MARIADB_VERSION/mariadb-java-client-$MARIADB_VERSION.jar && \
     curl -JLO https://search.maven.org/remotecontent?filepath=org/postgresql/postgresql/$POSTGRESQL_VERSION/postgresql-$POSTGRESQL_VERSION.jar && \
     curl -JLO https://search.maven.org/remotecontent?filepath=net/sourceforge/jtds/jtds/$JTDS_VERSION/jtds-$JTDS_VERSION.jar && \
-    mkdir /output && \
     chown -R java /drivers_inc && \
-    chown -R java /output && \
     apk del curl
 
 ADD target/schema*.jar /usr/local/lib/schemaspy/
@@ -43,5 +41,7 @@ COPY docker/schemaspy.sh /usr/local/bin/schemaspy
 COPY entrypoint.sh /entrypoint.sh
 
 ENV SCHEMASPY_DRIVERS=/drivers
+
+USER java
 
 ENTRYPOINT ["/entrypoint.sh"]
