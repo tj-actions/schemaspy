@@ -82,11 +82,14 @@ Example documentation available here: https://tj-actions.github.io/schemaspy/
 
 ## Using Docker image
 
-Run
+### Pulling image from ghcr.io
 
+Run
 ```shell
 docker pull ghcr.io/tj-actions/schemaspy:2.1
 ```
+
+### Running schemaspy locally
 
 > NOTE: The entrypoint is the `entrypoint.sh` script which requires certain environment variables to be set.
 
