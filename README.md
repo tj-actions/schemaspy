@@ -80,6 +80,27 @@ Example documentation available here: https://tj-actions.github.io/schemaspy/
 
 <!-- AUTO-DOC-INPUT:END -->
 
+
+## Using Docker image
+
+Run
+
+```shell
+docker pull ghcr.io/tj-actions/schemaspy:2.1
+```
+
+> NOTE: The entrypoint is the `entrypoint.sh` script which requires certain environment variables to be set.
+
+
+### Example usage with environment variables
+
+```
+docker run -v "$PWD:/docs" ghcr.io/tj-actions/schemaspy:2.1 -e INPUT_HOST=localhost -e INPUT_PORT=5432 -e INPUT_DATABASE_TYPE=pgsql -e INPUT_USER=test_user -e INPUT_PASSWORD=test_user_password -e INPUT_ALL=true
+```
+
+For more information on each environment variable please refer to the [inputs](#inputs). A general rule would be to prefix the environment variable with `INPUT_` and uppercase of any specific input separated by underscores.
+
+
 *   Free software: [MIT license](LICENSE)
 
 If you feel generous and want to show some extra appreciation:
