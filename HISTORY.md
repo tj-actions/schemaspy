@@ -1,12 +1,22 @@
 # Changelog
 
-## [v2.1](https://github.com/tj-actions/schemaspy/tree/v2.1) (2022-10-31)
+## [v2.2](https://github.com/tj-actions/schemaspy/tree/v2.2) (2022-10-31)
 
-[Full Changelog](https://github.com/tj-actions/schemaspy/compare/v2...v2.1)
+[Full Changelog](https://github.com/tj-actions/schemaspy/compare/v2...v2.2)
 
 ## [v2](https://github.com/tj-actions/schemaspy/tree/v2) (2022-10-31)
 
-[Full Changelog](https://github.com/tj-actions/schemaspy/compare/v2.0...v2)
+[Full Changelog](https://github.com/tj-actions/schemaspy/compare/v2.1...v2)
+
+**Merged pull requests:**
+
+- feat: add defaults for inputs and added all option. [\#17](https://github.com/tj-actions/schemaspy/pull/17) ([jackton1](https://github.com/jackton1))
+- Updated README.md [\#16](https://github.com/tj-actions/schemaspy/pull/16) ([jackton1](https://github.com/jackton1))
+- Upgraded to v2.1 [\#15](https://github.com/tj-actions/schemaspy/pull/15) ([jackton1](https://github.com/jackton1))
+
+## [v2.1](https://github.com/tj-actions/schemaspy/tree/v2.1) (2022-10-31)
+
+[Full Changelog](https://github.com/tj-actions/schemaspy/compare/v2.0...v2.1)
 
 **Merged pull requests:**
 
