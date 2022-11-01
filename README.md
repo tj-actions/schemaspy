@@ -87,7 +87,7 @@ Example documentation available here: https://tj-actions.github.io/schemaspy/
 Run
 
 ```shell
-docker pull ghcr.io/tj-actions/schemaspy:2.1
+docker pull ghcr.io/tj-actions/schemaspy:latest
 ```
 
 ### Running schemaspy locally
