@@ -1,12 +1,27 @@
 # Changelog
 
+## [v2.4](https://github.com/tj-actions/schemaspy/tree/v2.4) (2022-11-11)
+
+[Full Changelog](https://github.com/tj-actions/schemaspy/compare/v2...v2.4)
+
+## [v2](https://github.com/tj-actions/schemaspy/tree/v2) (2022-11-11)
+
+[Full Changelog](https://github.com/tj-actions/schemaspy/compare/v2.3...v2)
+
+**Closed issues:**
+
+- Dependency Dashboard [\#2](https://github.com/tj-actions/schemaspy/issues/2)
+
+**Merged pull requests:**
+
+- chore: update readme [\#23](https://github.com/tj-actions/schemaspy/pull/23) ([jackton1](https://github.com/jackton1))
+- Update postgres Docker tag to v15.1 [\#22](https://github.com/tj-actions/schemaspy/pull/22) ([renovate[bot]](https://github.com/apps/renovate))
+- Updated README.md [\#20](https://github.com/tj-actions/schemaspy/pull/20) ([jackton1](https://github.com/jackton1))
+- Upgraded to v2.3 [\#19](https://github.com/tj-actions/schemaspy/pull/19) ([jackton1](https://github.com/jackton1))
+
 ## [v2.3](https://github.com/tj-actions/schemaspy/tree/v2.3) (2022-10-31)
 
-[Full Changelog](https://github.com/tj-actions/schemaspy/compare/v2...v2.3)
-
-## [v2](https://github.com/tj-actions/schemaspy/tree/v2) (2022-10-31)
-
-[Full Changelog](https://github.com/tj-actions/schemaspy/compare/v2.2...v2)
+[Full Changelog](https://github.com/tj-actions/schemaspy/compare/v2.2...v2.3)
 
 **Merged pull requests:**
 
@@ -43,10 +58,6 @@
 ## [v1.1](https://github.com/tj-actions/schemaspy/tree/v1.1) (2022-10-30)
 
 [Full Changelog](https://github.com/tj-actions/schemaspy/compare/v1...v1.1)
-
-**Closed issues:**
-
-- Dependency Dashboard [\#2](https://github.com/tj-actions/schemaspy/issues/2)
 
 **Merged pull requests:**
 
