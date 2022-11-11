@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<database name="testdb" schema="public" type="PostgreSQL - 15.1 (Debian 15.1-1.pgdg110+1)">
+<?xml version="1.0" encoding="UTF-8"?><database name="testdb" schema="public" type="PostgreSQL - 15.1 (Debian 15.1-1.pgdg110+1)">
    <sequences>
       <sequence increment="1" name="accounts_user_id_seq" startValue="1"/>
    </sequences>
    <tables>
-      <table name="accounts" numRows="0" remarks="" schema="public" type="TABLE">
+      <table name="accounts" remarks="" schema="public" type="TABLE">
          <column autoUpdated="true" defaultValue="nextval('accounts_user_id_seq'::regclass)" digits="0" id="0" name="user_id" nullable="false" remarks="" size="10" type="serial" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="username" nullable="false" remarks="" size="50" type="varchar" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="password" nullable="false" remarks="" size="50" type="varchar" typeCode="12"/>
