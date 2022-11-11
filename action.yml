@@ -97,7 +97,7 @@ inputs:
   schema_meta:
     description: 'Single schema analysis file path to SchemaMeta_xml, when running `_all` or `_schemas` path to directory containing SchemaMeta_xmls with pattern (DatabaseName|Schema).meta.xml'
     required: false
-    default: 'false'
+    default: ''
   no_anomalies_paging:
     description: 'Whether DataTables for anomalies should have pagination'
     required: false
