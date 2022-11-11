@@ -6,7 +6,7 @@
 
 Run [schemaspy](https://schemaspy.org/) to generate a database schema documentation website.
 
-Example documentation available here: https://tj-actions.github.io/schemaspy/
+View example documentation here: https://tj-actions.github.io/schemaspy/
 
 ```yaml
 ...
