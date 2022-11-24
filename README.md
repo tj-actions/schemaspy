@@ -100,7 +100,7 @@ docker pull ghcr.io/tj-actions/schemaspy:latest
 docker run -v "$PWD:/docs" -e INPUT_HOST=localhost -e INPUT_PORT=5432 -e INPUT_DATABASE_TYPE=pgsql -e INPUT_USER=test_user -e INPUT_PASSWORD=test_user_password -e INPUT_ALL=true ghcr.io/tj-actions/schemaspy:latest
 ```
 
-For more information on each environment variable please refer to the [inputs](#inputs). A general rule would be to prefix the environment variable with `INPUT_` and uppercase of any specific input separated by underscores.
+For more information on each environment variable please refer to the [inputs](#inputs). A general rule would be to prefix the environment variable with `INPUT_` and the uppercase of any specific input separated by underscores.
 
 *   Free software: [MIT license](LICENSE)
 
