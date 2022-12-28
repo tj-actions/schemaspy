@@ -1,16 +1,33 @@
 # Changelog
 
-## [v2.4](https://github.com/tj-actions/schemaspy/tree/v2.4) (2022-11-11)
+## [v2.5](https://github.com/tj-actions/schemaspy/tree/v2.5) (2022-12-28)
 
-[Full Changelog](https://github.com/tj-actions/schemaspy/compare/v2...v2.4)
+[Full Changelog](https://github.com/tj-actions/schemaspy/compare/v2...v2.5)
 
-## [v2](https://github.com/tj-actions/schemaspy/tree/v2) (2022-11-11)
+## [v2](https://github.com/tj-actions/schemaspy/tree/v2) (2022-12-28)
 
-[Full Changelog](https://github.com/tj-actions/schemaspy/compare/v2.3...v2)
+[Full Changelog](https://github.com/tj-actions/schemaspy/compare/v2.4...v2)
 
 **Closed issues:**
 
 - Dependency Dashboard [\#2](https://github.com/tj-actions/schemaspy/issues/2)
+
+**Merged pull requests:**
+
+- chore: switch to using ghcr [\#33](https://github.com/tj-actions/schemaspy/pull/33) ([jackton1](https://github.com/jackton1))
+- Updated README.md [\#32](https://github.com/tj-actions/schemaspy/pull/32) ([jackton1](https://github.com/jackton1))
+- Updated README.md [\#31](https://github.com/tj-actions/schemaspy/pull/31) ([jackton1](https://github.com/jackton1))
+- Update tj-actions/verify-changed-files action to v13 [\#30](https://github.com/tj-actions/schemaspy/pull/30) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/auto-doc action to v1.6.0 [\#29](https://github.com/tj-actions/schemaspy/pull/29) ([renovate[bot]](https://github.com/apps/renovate))
+- Update cirrus-actions/rebase action to v1.8 [\#28](https://github.com/tj-actions/schemaspy/pull/28) ([renovate[bot]](https://github.com/apps/renovate))
+- Update actions/checkout action to v3.2.0 [\#27](https://github.com/tj-actions/schemaspy/pull/27) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/auto-doc action to v1.5.0 [\#26](https://github.com/tj-actions/schemaspy/pull/26) ([renovate[bot]](https://github.com/apps/renovate))
+- Upgraded to v2.4 [\#25](https://github.com/tj-actions/schemaspy/pull/25) ([jackton1](https://github.com/jackton1))
+- Updated README.md [\#24](https://github.com/tj-actions/schemaspy/pull/24) ([jackton1](https://github.com/jackton1))
+
+## [v2.4](https://github.com/tj-actions/schemaspy/tree/v2.4) (2022-11-11)
+
+[Full Changelog](https://github.com/tj-actions/schemaspy/compare/v2.3...v2.4)
 
 **Merged pull requests:**
 
