@@ -1,4 +1,4 @@
-FROM --platform=linux/x86_64 amazoncorretto:17.0.6-alpine3.14
+FROM --platform=linux/x86_64 amazoncorretto:17.0.7-alpine3.14
 
 LABEL maintainer="Tonye Jack <jtonye@ymail.com>"
 
