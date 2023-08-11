@@ -11,7 +11,7 @@ jobs:
     name: Test schemaspy
     services:
       postgres:
-        image: postgres:15.3
+        image: postgres:15.4
         env:
           POSTGRES_USER: test_user
           POSTGRES_PASSWORD: test_user_password
