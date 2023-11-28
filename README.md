@@ -92,7 +92,8 @@ docker pull ghcr.io/tj-actions/schemaspy:latest
 
 ### Running schemaspy locally
 
-> NOTE: The entrypoint is the `entrypoint.sh` script which requires certain environment variables to be set.
+> [!NOTE]
+> * The entrypoint is the `entrypoint.sh` script which requires certain environment variables to be set.
 
 ### Example usage with environment variables
 
