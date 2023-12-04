@@ -1,5 +1,30 @@
 # Changelog
 
+# [2.7](https://github.com/tj-actions/schemaspy/compare/v2.6...v2.7) - (2023-12-04)
+
+## <!-- 26 -->🔄 Update
+
+- Updated README.md ([#130](https://github.com/tj-actions/schemaspy/issues/130))
+
+Co-authored-by: jackton1 <jackton1@users.noreply.github.com> ([f68614f](https://github.com/tj-actions/schemaspy/commit/f68614f63636e0057ccaad4d70fa74aaff209e12))  - (tj-actions[bot])
+- Update Dockerfile -- curl syntax ([#127](https://github.com/tj-actions/schemaspy/issues/127))
+
+ ([5abea0c](https://github.com/tj-actions/schemaspy/commit/5abea0ca8cb1a2ed440fdf2e6fb62798368332d7))  - (wschuell)
+
+## <!-- 3 -->📚 Documentation
+
+- Add wschuell as a contributor for bug, and code ([#129](https://github.com/tj-actions/schemaspy/issues/129)) ([43612ee](https://github.com/tj-actions/schemaspy/commit/43612ee1434aa026dc09210c5a00b2f51e8a116b))  - (allcontributors[bot])
+
+## <!-- 7 -->⚙️ Miscellaneous Tasks
+
+- Update test to use Dockerfile ([#128](https://github.com/tj-actions/schemaspy/issues/128)) ([ebeeed4](https://github.com/tj-actions/schemaspy/commit/ebeeed4a1cc4e317829063ebae68ddbac9f1a01b))  - (Tonye Jack)
+
+## <!-- 9 -->⬆️ Upgrades
+
+- Upgraded to v2.6 ([#126](https://github.com/tj-actions/schemaspy/issues/126))
+
+Co-authored-by: jackton1 <jackton1@users.noreply.github.com> ([83c52f2](https://github.com/tj-actions/schemaspy/commit/83c52f2e81a5c2e55e8fb2feb43209e043d64a06))  - (tj-actions[bot])
+
 # [2.6](https://github.com/tj-actions/schemaspy/compare/v2.5...v2.6) - (2023-12-02)
 
 ## <!-- 16 -->➕ Add
