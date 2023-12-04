@@ -34,6 +34,9 @@ jobs:
         with:
           database_url: "postgres://test_user:test_user_password@localhost:5432/testdb"
           backup_file: "backups/backup.sql"
+      - name: Update image key
+        run: |
+          yq eval '.runs.image = "./Dockerfile"' -i action.yml
       - name: Run schemaspy
         uses: ./
         with:
