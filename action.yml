@@ -190,11 +190,9 @@ inputs:
     description: 'Analyze all schemas in the database'
     required: false
     default: 'false'
-
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/tj-actions/schemaspy:latest'
-
+  image: './Dockerfile'
 branding:
   icon: check-square
   color: white
