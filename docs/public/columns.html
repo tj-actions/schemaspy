@@ -142,6 +142,20 @@
         "tableName": "accounts",
         "tableFileName": "accounts",
         "tableType": "Table",
+        "keyClass": "primaryKey",
+        "keyTitle": "Primary Key",
+        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>user_id",
+        "type": "serial",
+        "length": 10,
+        "nullable": "",
+        "autoUpdated": "√",
+        "defaultValue": "nextval('accounts_user_id_seq'::regclass)",
+        "comments": ""
+    },
+    {
+        "tableName": "accounts",
+        "tableFileName": "accounts",
+        "tableType": "Table",
         "keyClass": "indexedColumn",
         "keyTitle": "Indexed",
         "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>email",
@@ -164,20 +178,6 @@
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": ""
-    },
-    {
-        "tableName": "accounts",
-        "tableFileName": "accounts",
-        "tableType": "Table",
-        "keyClass": "primaryKey",
-        "keyTitle": "Primary Key",
-        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>user_id",
-        "type": "serial",
-        "length": 10,
-        "nullable": "",
-        "autoUpdated": "√",
-        "defaultValue": "nextval('accounts_user_id_seq'::regclass)",
         "comments": ""
     },
     {
