@@ -192,7 +192,7 @@ inputs:
     default: 'false'
 runs:
   using: 'docker'
-  image: './Dockerfile'
+  image: 'docker://ghcr.io/tj-actions/schemaspy:latest'
 branding:
   icon: check-square
   color: white
