@@ -17,7 +17,7 @@ View example documentation here: https://tj-actions.github.io/schemaspy/
 ```yaml
 ...
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Run SchemaSpy
         uses: tj-actions/schemaspy@v2
         with:
