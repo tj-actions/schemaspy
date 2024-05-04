@@ -38,12 +38,14 @@ View example documentation here: https://tj-actions.github.io/schemaspy/
 - uses: tj-actions/schemaspy@v2
   id: schemaspy
   with:
-    # Analyze all schemas in the database
+    # Analyze all schemas in the 
+    # database 
     # Type: boolean
     # Default: "false"
     all: ''
 
-    # Whether users can change the page length for anomalies
+    # Whether users can change the 
+    # page length for anomalies 
     # Type: boolean
     # Default: "false"
     anomalies_length_change: ''
@@ -53,23 +55,27 @@ View example documentation here: https://tj-actions.github.io/schemaspy/
     # Default: "10"
     anomalies_page_length: ''
 
-    # Filter using a specific catalog this is usually the 
-    # root of the database and contains schemas. 
+    # Filter using a specific catalog 
+    # this is usually the root 
+    # of the database and contains 
+    # schemas. 
     # Type: string
     catalog: ''
 
-    # Whether users can change the page length for check 
-    # constraints 
+    # Whether users can change the 
+    # page length for check constraints 
     # Type: boolean
     # Default: "false"
     check_length_change: ''
 
-    # The DataTables pageLength for check constraints
+    # The DataTables pageLength for check 
+    # constraints 
     # Type: string
     # Default: "10"
     check_page_length: ''
 
-    # Whether users can change the page length for routines
+    # Whether users can change the 
+    # page length for routines 
     # Type: boolean
     # Default: "false"
     column_length_change: ''
@@ -79,22 +85,25 @@ View example documentation here: https://tj-actions.github.io/schemaspy/
     # Default: "50"
     column_page_length: ''
 
-    # Name of the database to connect to
+    # Name of the database to 
+    # connect to 
     # Type: string
     database_name: ''
 
-    # Type of database to connect to
+    # Type of database to connect 
+    # to 
     # Type: string
     # Default: "ora"
     database_type: ''
 
-    # Whether users can change the page length for database 
-    # objects 
+    # Whether users can change the 
+    # page length for database objects 
     # Type: boolean
     # Default: "false"
     db_object_length_change: ''
 
-    # The DataTables pageLength for database objects
+    # The DataTables pageLength for database 
+    # objects 
     # Type: string
     # Default: "50"
     db_object_page_length: ''
@@ -104,46 +113,55 @@ View example documentation here: https://tj-actions.github.io/schemaspy/
     # Default: "false"
     debug: ''
 
-    # Limit the degree of separation, allowed values 1 or 
-    # 2, defaults to 2 
+    # Limit the degree of separation, 
+    # allowed values 1 or 2, 
+    # defaults to 2 
     # Type: string
     # Default: "2"
     degree: ''
 
-    # Path to look for JDBC drivers overrides driverPath in 
-    # [databaseType].properties, supports directory, will add directory and recurse to 
-    # add all content. Supports multiple paths using os dependent 
-    # pathSeparator. 
+    # Path to look for JDBC 
+    # drivers overrides driverPath in [databaseType].properties, 
+    # supports directory, will add directory 
+    # and recurse to add all 
+    # content. Supports multiple paths using 
+    # os dependent pathSeparator. 
     # Type: string
     driver_path: ''
 
-    # Whether users can change the page length for foreign 
-    # keys 
+    # Whether users can change the 
+    # page length for foreign keys 
     # Type: boolean
     # Default: "false"
     fk_length_change: ''
 
-    # The DataTables pageLength for foreign keys
+    # The DataTables pageLength for foreign 
+    # keys 
     # Type: string
     # Default: "10"
     fk_page_length: ''
 
-    # Path to directory containing graphviz bin folder. /bin/dot will 
-    # be appended 
+    # Path to directory containing graphviz 
+    # bin folder. /bin/dot will be 
+    # appended 
     # Type: string
     graphviz_dir: ''
 
-    # Hostname/ip to connect to, if required by databaseType.
+    # Hostname/ip to connect to, if 
+    # required by databaseType. 
     # Type: string
     host: ''
 
-    # The format of the image that gets generated. Supported 
-    # formats are svg and png. Defaults to png. 
+    # The format of the image 
+    # that gets generated. Supported formats 
+    # are svg and png. Defaults 
+    # to png. 
     # Type: string
     # Default: "png"
     image_format: ''
 
-    # Whether users can change the page length for indexes
+    # Whether users can change the 
+    # page length for indexes 
     # Type: boolean
     # Default: "false"
     index_length_change: ''
@@ -153,39 +171,46 @@ View example documentation here: https://tj-actions.github.io/schemaspy/
     # Default: "10"
     index_page_length: ''
 
-    # Print license, it will first print GPL and then 
-    # LGPL (LGPL is addition to GPL) 
+    # Print license, it will first 
+    # print GPL and then LGPL 
+    # (LGPL is addition to GPL) 
     # Type: boolean
     # Default: "false"
     license: ''
 
-    # Try to generate low quality diagrams, depending on renderers/Graphviz 
-    # installation might not be available 
+    # Try to generate low quality 
+    # diagrams, depending on renderers/Graphviz installation 
+    # might not be available 
     # Type: boolean
     # Default: "false"
     low_quality: ''
 
-    # Whether DataTables for anomalies should have pagination
+    # Whether DataTables for anomalies should 
+    # have pagination 
     # Type: boolean
     # Default: "false"
     no_anomalies_paging: ''
 
-    # Whether DataTables for check constraints should have pagination
+    # Whether DataTables for check constraints 
+    # should have pagination 
     # Type: boolean
     # Default: "false"
     no_check_paging: ''
 
-    # Whether DataTables for routines should have pagination
+    # Whether DataTables for routines should 
+    # have pagination 
     # Type: boolean
     # Default: "false"
     no_column_paging: ''
 
-    # Whether DataTables for database objects should have pagination
+    # Whether DataTables for database objects 
+    # should have pagination 
     # Type: boolean
     # Default: "false"
     no_db_object_paging: ''
 
-    # Whether DataTables for foreign keys should have pagination
+    # Whether DataTables for foreign keys 
+    # should have pagination 
     # Type: boolean
     # Default: "false"
     no_fk_paging: ''
@@ -195,45 +220,54 @@ View example documentation here: https://tj-actions.github.io/schemaspy/
     # Default: "false"
     no_html: ''
 
-    # Do not look for implied relationships
+    # Do not look for implied 
+    # relationships 
     # Type: boolean
     # Default: "false"
     no_implied: ''
 
-    # Whether DataTables for indexes should have pagination
+    # Whether DataTables for indexes should 
+    # have pagination 
     # Type: boolean
     # Default: "false"
     no_index_paging: ''
 
-    # Whether DataTables for routines should have pagination
+    # Whether DataTables for routines should 
+    # have pagination 
     # Type: boolean
     # Default: "false"
     no_routine_paging: ''
 
-    # Whether DataTables for database tables should have pagination
+    # Whether DataTables for database tables 
+    # should have pagination 
     # Type: boolean
     # Default: "false"
     no_table_paging: ''
 
-    # Directory to place the generated files in
+    # Directory to place the generated 
+    # files in 
     # Type: string
     # Default: "docs"
     output_dir: ''
 
-    # Password to connect to database, if required by databaseType.
+    # Password to connect to database, 
+    # if required by databaseType. 
     # Type: string
     password: ''
 
-    # Port that dbms listens to, if required by databaseType.
+    # Port that dbms listens to, 
+    # if required by databaseType. 
     # Type: string
     port: ''
 
-    # Specify which renderer to use should be prefixed with 
-    # `:`. Example `:cairo` 
+    # Specify which renderer to use 
+    # should be prefixed with `:`. 
+    # Example `:cairo` 
     # Type: string
     renderer: ''
 
-    # Whether users can change the page length for routines
+    # Whether users can change the 
+    # page length for routines 
     # Type: boolean
     # Default: "false"
     routine_length_change: ''
@@ -243,33 +277,38 @@ View example documentation here: https://tj-actions.github.io/schemaspy/
     # Default: "50"
     routine_page_length: ''
 
-    # Name of the schema to analyze (defaults to the specified user) 
+    # Name of the schema to 
+    # analyze (defaults to the specified user) 
     # Type: string
     schema: ''
 
-    # Single schema analysis file path to SchemaMeta_xml, when running 
-    # `_all` or `_schemas` path to directory containing SchemaMeta_xmls with 
-    # pattern (DatabaseName|Schema).meta.xml 
+    # Single schema analysis file path 
+    # to SchemaMeta_xml, when running `_all` 
+    # or `_schemas` path to directory 
+    # containing SchemaMeta_xmls with pattern (DatabaseName|Schema).meta.xml 
     # Type: string
     schema_meta: ''
 
-    # Use single sign on, if required by databaseType.
+    # Use single sign on, if 
+    # required by databaseType. 
     # Type: boolean
     # Default: "false"
     sso: ''
 
-    # Whether users can change the page length for database 
-    # tables 
+    # Whether users can change the 
+    # page length for database tables 
     # Type: boolean
     # Default: "false"
     table_length_change: ''
 
-    # The DataTables pageLength for database tables
+    # The DataTables pageLength for database 
+    # tables 
     # Type: string
     # Default: "50"
     table_page_length: ''
 
-    # Username to connect with, if required by databaseType.
+    # Username to connect with, if 
+    # required by databaseType. 
     # Type: string
     user: ''
 
