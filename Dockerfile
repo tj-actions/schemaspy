@@ -7,9 +7,14 @@ ENV LC_ALL=C
 ARG GIT_BRANCH=local
 ARG GIT_REVISION=local
 
+ENV SCHEMASPY_GROUP_ID=org.schemaspy
+ENV SCHEMASPY_ARTIFACT_ID=schemaspy
+ENV SCHEMASPY_VERSION=6.2.4
+ENV SCHEMASPY_CLASSIFIER=app
+
 ENV MYSQL_VERSION=8.0.28
 ENV MARIADB_VERSION=1.1.10
-ENV POSTGRESQL_VERSION=42.3.5
+ENV POSTGRESQL_VERSION=42.3.8
 ENV JTDS_VERSION=1.3.1
 
 LABEL MYSQL_VERSION=$MYSQL_VERSION
@@ -26,17 +31,19 @@ RUN set -x && \
     apk update && apk upgrade && \
     apk add --no-cache curl unzip bash graphviz fontconfig && \
     fc-cache -fv && \
+    mkdir -p /usr/local/lib/schemaspy && \
     mkdir /drivers_inc && \
     cd /drivers_inc && \
     curl -JL https://search.maven.org/remotecontent?filepath=mysql/mysql-connector-java/$MYSQL_VERSION/mysql-connector-java-$MYSQL_VERSION.jar --output mysql-connector-java-$MYSQL_VERSION.jar && \
     curl -JL https://search.maven.org/remotecontent?filepath=org/mariadb/jdbc/mariadb-java-client/$MARIADB_VERSION/mariadb-java-client-$MARIADB_VERSION.jar --output mariadb-java-client-$MARIADB_VERSION.jar && \
     curl -JL https://search.maven.org/remotecontent?filepath=org/postgresql/postgresql/$POSTGRESQL_VERSION/postgresql-$POSTGRESQL_VERSION.jar --output postgresql-$POSTGRESQL_VERSION.jar && \
     curl -JL https://search.maven.org/remotecontent?filepath=net/sourceforge/jtds/jtds/$JTDS_VERSION/jtds-$JTDS_VERSION.jar --output jtds-$JTDS_VERSION.jar && \
-    apk del curl
+    curl -JL https://search.maven.org/remotecontent?filepath=$( echo -n $SCHEMASPY_GROUP_ID | sed s/"\."/"\/"/g )/$SCHEMASPY_ARTIFACT_ID/$SCHEMASPY_VERSION/$SCHEMASPY_ARTIFACT_ID-$SCHEMASPY_VERSION$( echo -n "-$SCHEMASPY_CLASSIFIER" | sed s/"^-$"//).jar --output /usr/local/lib/schemaspy/schemaspy.jar && \
+    echo -n "${SCHEMASPY_GROUP_ID}:${SCHEMASPY_ARTIFACT_ID}:${SCHEMASPY_VERSION}" > /usr/local/lib/schemaspy/version.txt
 
-ADD target/schema*.jar /usr/local/lib/schemaspy/
 COPY docker/schemaspy.sh /usr/local/bin/schemaspy
 COPY entrypoint.sh /entrypoint.sh
+COPY prepare.sh /prepare.sh
 
 ENV SCHEMASPY_DRIVERS=/drivers
 
